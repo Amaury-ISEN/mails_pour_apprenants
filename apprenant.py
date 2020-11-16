@@ -6,10 +6,10 @@ class Apprenant:
 
     #Pour instancier chaque objet apprenant, on utilise un tuple (id, nom, prenom, mail) issu de la requête SQL sur la table apprenants
     def __init__ (self, tuple_apprenant):
-        setattr(self, "id", tuple_apprenant[0])
-        setattr(self, "nom", tuple_apprenant[1])
-        setattr(self, "prenom", tuple_apprenant[2])
-        setattr(self, "mail", tuple_apprenant[3])
+        self.id = tuple_apprenant[0]
+        self.nom = tuple_apprenant[1]
+        self.prenom = tuple_apprenant[2]
+        self.mail = tuple_apprenant[3]
 
     #La méthode suivante est statique pour être plus simple à utiliser.
     #Elle prend en paramètre la liste d'objets apprenants et une liste de mails + noms/prénoms générés.
